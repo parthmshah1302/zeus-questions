@@ -1,0 +1,49 @@
+// #include<stdio.h>
+// int main(){
+//     printf("ssup");
+//     return 0;
+// }
+#include<stdio.h>
+int main(){
+    int i,j,k,J,jnot;
+    i=11;
+    J=2*i-1;
+    jnot=J-2;
+    for(i=0;i<11;i++){
+        for(j=1;j<=J;j++){
+            if(j==1||j==J){
+                printf("*");
+            }
+            else{
+                if(i<=(i+1)/2){
+                    for(k=1;k<i;k++){
+                        printf("%d",k);
+                        
+                    }
+                    for(k=i;k<J;k--){
+                    printf("%d",k-1);
+                    
+                            
+                        
+                    }
+                }
+                    else{
+                        
+                        for(k=1;k<i;k++){
+                            printf("%d",k);
+                        
+                        }
+                        for(k=i;k<jnot;k--){
+                            printf("%d",k);
+                        }
+                        
+                    }
+                }
+                
+                }
+            }
+        }
+        jnot=jnot-2;
+        printf("\n");
+    }    
+}
