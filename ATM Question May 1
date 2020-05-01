@@ -1,0 +1,36 @@
+// #include<stdio.h>
+// int main(){
+//     printf("ssup");
+//     return 0;
+// }
+#include<stdio.h>
+int main(){
+    int atmnos;
+    scanf("%d",&atmnos);
+    int custnos[atmnos],atmbal[atmnos];
+    for(int i=1;i<=atmnos;i++){
+        scanf("%d %d",&custnos[i],&atmbal[i]);
+        
+            int custdata[custnos[i]];
+            int parth=atmbal[i];
+            //parth=atmbal[j];
+            for(int k=1;k<=custnos[i];k++){
+                scanf("%d",&custdata[k]);
+                if(parth-custdata[k]>=0){
+                    parth=parth-custdata[k];
+                    printf("1");
+                }
+                else{
+                    printf("0");
+                }
+                
+            }
+            printf("\n");
+        
+        
+    }
+        //The number of customers have been scanned, alongside the initial balance in the machine
+        
+
+    return 0;
+}
