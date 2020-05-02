@@ -5,19 +5,22 @@
 // }
 #include<stdio.h>
 int main(){
+    //Test cases are scanned by this
     int weekendnos;
     scanf("%d\n",&weekendnos);
     int movienos[weekendnos];
-    int movienossize=(sizeof(movienos)/sizeof(int));
+    
     int j;
+    int k;
     for(int i=1;i<=weekendnos;i++){
         scanf("%d\n",&movienos[i]);
+        int movienossize=(sizeof(movienos)/sizeof(int));
         int movielen[movienossize];
         int movierate[movienossize];
         for(j=1;j<=movienossize;j++){
             scanf("%d",&movielen[j]);
         }
-        printf("\n");
+        
         for(j=1;j<=movienossize;j++){
             scanf("%d",&movierate[j]);
         }
@@ -25,13 +28,47 @@ int main(){
         for(j=1;j<=movienossize;j++){
             movielr[j]=(movielen[j]*movierate[j]);
         }
-        for(j=)
+        int tester[movienossize];
+        //Maximum number is found by this
+        int maxlrchecker=movielr[1];
+        int maxrate=1;
+        int maxlr=1;
+        
+        for(j=1;j<=movienossize;j++){
+            int counter;
+             if(maxlrchecker<movielr[j]){
+                maxlrchecker=movielr[j];
+                maxlr=j;
+                }
+             else if(maxlrchecker==movielr[j]){
+                 maxrate=j;
+                 
+             }   
+            }
+            if(movielr[maxlr]==movielr[maxrate]){
+                if(movierate[maxlr]==movierate[maxrate]){
+                    if(maxlr<maxrate){
+                        printf("%d\n",maxlr);
+                    }
+                    else if(maxlr>maxrate){
+                        printf("line 54 %d\n",maxrate);
+                    }
+                }
+                else if(movierate[maxlr]>movierate[maxrate]){
+                    printf("line 58 %d\n",maxlr);
+                }
+                else if(movierate[maxlr]<movierate[maxrate]){
+                    printf("line 61 %d\n",maxrate);
+                }
+                
+            }
+            else{
+                printf("line 66 %d\n",maxlr);
+            }
+            
         
     
-        printf("Weekend nos is : %d\n",weekendnos);
-        // printf("Movie nos is : %d\n",movienos[]);
-        // printf("Movie len is : %d\n",movielen[]);
-        // printf("Movie rate is : %d\n"movie rate[]);
+        
     }
 
     return 0;
