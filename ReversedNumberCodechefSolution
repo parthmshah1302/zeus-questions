@@ -1,0 +1,37 @@
+// #include<stdio.h>
+// int main(){
+//     printf("ssup");
+//     return 0;
+// }
+
+#include<stdio.h>
+int main(){
+    int i,j,sum,rem,count,temp,temp1;
+    
+    scanf("%d",&i);
+    int numberlist[i];
+    int reversednumbers[i];
+    for(count=0;count<i;count++){
+        scanf("%d",&numberlist[count]);
+        temp=numberlist[count];
+        
+    
+            sum=0;
+         while(temp>0){
+             
+             rem=temp%10;
+            sum=10*sum+rem;
+            temp=temp/10;
+             
+            }
+        reversednumbers[count]=sum;        
+    }
+    for(count=0;count<i;count++){
+        printf("%d\n",reversednumbers[count]);
+    }
+        
+        
+    
+        
+    return 0;
+}
