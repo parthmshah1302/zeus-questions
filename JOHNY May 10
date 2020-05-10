@@ -1,0 +1,39 @@
+// #include<stdio.h>
+// int main(){
+//     printf("ssup");
+//     return 0;
+// }
+#include<stdio.h>
+int main(){
+    int testcases,songnum,johnnyindex,johnnylen,swap;
+    scanf("%d",&testcases);
+    for(int i=0;i<testcases;i++){
+        scanf("%d",&songnum);
+        int songlen[songnum];
+        for(int j=0;j<songnum;j++){
+            scanf("%d",&songlen[j]);
+            }
+            
+        scanf("%d",&johnnyindex);
+        johnnylen=songlen[johnnyindex-1];
+        //Swapping for loops start here
+        for(int j=0;j<songnum-1;j++){
+            for(int k=0;k<songnum-j-1;k++){
+                if(songlen[k]>songlen[k+1]){
+                 swap=songlen[k];
+                 songlen[k]=songlen[k+1];
+                 songlen[k+1]=swap;
+                }
+            }
+        }
+        for(int j=0;j<songnum;j++){
+            if(johnnylen==songlen[j]){
+            printf("%d\n",j+1);
+            break;
+        
+            }
+        }
+        
+    }
+    return 0;
+}
