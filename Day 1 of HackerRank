@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int i = 4;
+    double d = 4.0;
+    char s[] = "HackerRank ";
+int integer;
+double doublee;
+char str[1000];
+scanf("%d",&integer);
+scanf("%lf",&doublee);
+scanf("%s",str);
+strcat(s,str);
+integer=integer+i;
+doublee=doublee+d;
+printf("%d\n",integer);
+printf("%.1lf\n",doublee);
+printf("%s\n",s);
+
+
+
+
+
+
+    return 0;
+}
